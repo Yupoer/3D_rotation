@@ -1,0 +1,509 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
+      已經開始建置於 2025/5/4 上午 05:09:05。
+      
+      節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdC\\CompilerIdC.vcxproj"。
+      PrepareForBuild:
+        正在建立目錄 "Debug\\"。
+        結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
+        正在建立目錄 "Debug\\CompilerIdC.tlog\\"。
+      InitializeBuildStatus:
+        由於指定了 "AlwaysCreate"，因此正在建立 "Debug\\CompilerIdC.tlog\\unsuccessfulbuild"。
+        正在變更時間戳記 "Debug\\CompilerIdC.tlog\\unsuccessfulbuild"。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 不是內部或外部命令、可執行的程式或批次檔。
+        "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"" 命令以返回碼 9009 結束。
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在刪除檔案 "Debug\\CompilerIdC.tlog\\unsuccessfulbuild"。
+        正在變更時間戳記 "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate"。
+      專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdC\\CompilerIdC.vcxproj" (預設目標) 建置完成。
+      
+      建置成功。
+          0 個警告
+          0 個錯誤
+      
+      經過時間 00:00:00.96
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/4.0.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
+      已經開始建置於 2025/5/4 上午 05:09:07。
+      
+      節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj"。
+      PrepareForBuild:
+        正在建立目錄 "Debug\\"。
+        結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
+        正在建立目錄 "Debug\\CompilerIdCXX.tlog\\"。
+      InitializeBuildStatus:
+        由於指定了 "AlwaysCreate"，因此正在建立 "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild"。
+        正在變更時間戳記 "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild"。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 不是內部或外部命令、可執行的程式或批次檔。
+        "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"" 命令以返回碼 9009 結束。
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在刪除檔案 "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild"。
+        正在變更時間戳記 "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate"。
+      專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\4.0.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (預設目標) 建置完成。
+      
+      建置成功。
+          0 個警告
+          0 個錯誤
+      
+      經過時間 00:00:00.95
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/4.0.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-mmgx80"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-mmgx80"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-mmgx80'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c8a9f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
+        已經開始建置於 2025/5/4 上午 05:09:08。
+        
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mmgx80\\cmTC_c8a9f.vcxproj"。
+        PrepareForBuild:
+          正在建立目錄 "cmTC_c8a9f.dir\\Debug\\"。
+          結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mmgx80\\Debug\\"。
+          正在建立目錄 "cmTC_c8a9f.dir\\Debug\\cmTC_c8a9f.tlog\\"。
+        InitializeBuildStatus:
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_c8a9f.dir\\Debug\\cmTC_c8a9f.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_c8a9f.dir\\Debug\\cmTC_c8a9f.tlog\\unsuccessfulbuild"。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8a9f.dir\\Debug\\\\" /Fd"cmTC_c8a9f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
+          Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8a9f.dir\\Debug\\\\" /Fd"cmTC_c8a9f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mmgx80\\Debug\\cmTC_c8a9f.exe" /INCREMENTAL /ILK:"cmTC_c8a9f.dir\\Debug\\cmTC_c8a9f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-mmgx80/Debug/cmTC_c8a9f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-mmgx80/Debug/cmTC_c8a9f.lib" /MACHINE:X64  /machine:x64 cmTC_c8a9f.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_c8a9f.vcxproj -> C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mmgx80\\Debug\\cmTC_c8a9f.exe
+        FinalizeBuildStatus:
+          正在刪除檔案 "cmTC_c8a9f.dir\\Debug\\cmTC_c8a9f.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_c8a9f.dir\\Debug\\cmTC_c8a9f.tlog\\cmTC_c8a9f.lastbuildstate"。
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mmgx80\\cmTC_c8a9f.vcxproj" (預設目標) 建置完成。
+        
+        建置成功。
+            0 個警告
+            0 個錯誤
+        
+        經過時間 00:00:00.58
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:264 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.38.33133.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-qhurge"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-qhurge"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-qhurge'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b7b79.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
+        已經開始建置於 2025/5/4 上午 05:09:09。
+        
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qhurge\\cmTC_b7b79.vcxproj"。
+        PrepareForBuild:
+          正在建立目錄 "cmTC_b7b79.dir\\Debug\\"。
+          結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qhurge\\Debug\\"。
+          正在建立目錄 "cmTC_b7b79.dir\\Debug\\cmTC_b7b79.tlog\\"。
+        InitializeBuildStatus:
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_b7b79.dir\\Debug\\cmTC_b7b79.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_b7b79.dir\\Debug\\cmTC_b7b79.tlog\\unsuccessfulbuild"。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b7b79.dir\\Debug\\\\" /Fd"cmTC_b7b79.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
+          Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b7b79.dir\\Debug\\\\" /Fd"cmTC_b7b79.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qhurge\\Debug\\cmTC_b7b79.exe" /INCREMENTAL /ILK:"cmTC_b7b79.dir\\Debug\\cmTC_b7b79.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-qhurge/Debug/cmTC_b7b79.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-qhurge/Debug/cmTC_b7b79.lib" /MACHINE:X64  /machine:x64 cmTC_b7b79.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_b7b79.vcxproj -> C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qhurge\\Debug\\cmTC_b7b79.exe
+        FinalizeBuildStatus:
+          正在刪除檔案 "cmTC_b7b79.dir\\Debug\\cmTC_b7b79.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_b7b79.dir\\Debug\\cmTC_b7b79.tlog\\cmTC_b7b79.lastbuildstate"。
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qhurge\\cmTC_b7b79.vcxproj" (預設目標) 建置完成。
+        
+        建置成功。
+            0 個警告
+            0 個錯誤
+        
+        經過時間 00:00:00.55
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:264 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.38.33133.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-qjf28k"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-qjf28k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-qjf28k'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d683a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
+        已經開始建置於 2025/5/4 上午 05:09:10。
+        
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\cmTC_d683a.vcxproj"。
+        PrepareForBuild:
+          正在建立目錄 "cmTC_d683a.dir\\Debug\\"。
+          結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\Debug\\"。
+          正在建立目錄 "cmTC_d683a.dir\\Debug\\cmTC_d683a.tlog\\"。
+        InitializeBuildStatus:
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_d683a.dir\\Debug\\cmTC_d683a.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_d683a.dir\\Debug\\cmTC_d683a.tlog\\unsuccessfulbuild"。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d683a.dir\\Debug\\\\" /Fd"cmTC_d683a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
+          Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d683a.dir\\Debug\\\\" /Fd"cmTC_d683a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\src.c"
+          src.c
+        C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\src.c(1,10): error C1083: 無法開啟包含檔案: 'pthread.h': No such file or directory [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\cmTC_d683a.vcxproj]
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\cmTC_d683a.vcxproj" (預設目標) 建置完成 -- 失敗。
+        
+        建置失敗。
+        
+        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\cmTC_d683a.vcxproj" (預設目標) (1) ->
+        (ClCompile 目標) -> 
+          C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\src.c(1,10): error C1083: 無法開啟包含檔案: 'pthread.h': No such file or directory [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qjf28k\\cmTC_d683a.vcxproj]
+        
+            0 個警告
+            1 個錯誤
+        
+        經過時間 00:00:00.39
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-gfm3jm"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-gfm3jm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-gfm3jm'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b47b5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
+        已經開始建置於 2025/5/4 上午 05:09:11。
+        
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\cmTC_b47b5.vcxproj"。
+        PrepareForBuild:
+          正在建立目錄 "cmTC_b47b5.dir\\Debug\\"。
+          結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\Debug\\"。
+          正在建立目錄 "cmTC_b47b5.dir\\Debug\\cmTC_b47b5.tlog\\"。
+        InitializeBuildStatus:
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_b47b5.dir\\Debug\\cmTC_b47b5.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_b47b5.dir\\Debug\\cmTC_b47b5.tlog\\unsuccessfulbuild"。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b47b5.dir\\Debug\\\\" /Fd"cmTC_b47b5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
+          Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b47b5.dir\\Debug\\\\" /Fd"cmTC_b47b5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\Debug\\cmTC_b47b5.exe" /INCREMENTAL /ILK:"cmTC_b47b5.dir\\Debug\\cmTC_b47b5.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-gfm3jm/Debug/cmTC_b47b5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-gfm3jm/Debug/cmTC_b47b5.lib" /MACHINE:X64  /machine:x64 cmTC_b47b5.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 無法開啟檔案 'pthreads.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\cmTC_b47b5.vcxproj]
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\cmTC_b47b5.vcxproj" (預設目標) 建置完成 -- 失敗。
+        
+        建置失敗。
+        
+        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\cmTC_b47b5.vcxproj" (預設目標) (1) ->
+        (Link 目標) -> 
+          LINK : fatal error LNK1104: 無法開啟檔案 'pthreads.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gfm3jm\\cmTC_b47b5.vcxproj]
+        
+            0 個警告
+            1 個錯誤
+        
+        經過時間 00:00:00.41
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
+      - "C:/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-n1z29b"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-n1z29b"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-n1z29b'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1a383.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
+        已經開始建置於 2025/5/4 上午 05:09:11。
+        
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\cmTC_1a383.vcxproj"。
+        PrepareForBuild:
+          正在建立目錄 "cmTC_1a383.dir\\Debug\\"。
+          結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\Debug\\"。
+          正在建立目錄 "cmTC_1a383.dir\\Debug\\cmTC_1a383.tlog\\"。
+        InitializeBuildStatus:
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_1a383.dir\\Debug\\cmTC_1a383.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_1a383.dir\\Debug\\cmTC_1a383.tlog\\unsuccessfulbuild"。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1a383.dir\\Debug\\\\" /Fd"cmTC_1a383.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
+          Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1a383.dir\\Debug\\\\" /Fd"cmTC_1a383.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\Debug\\cmTC_1a383.exe" /INCREMENTAL /ILK:"cmTC_1a383.dir\\Debug\\cmTC_1a383.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-n1z29b/Debug/cmTC_1a383.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/CMakeScratch/TryCompile-n1z29b/Debug/cmTC_1a383.lib" /MACHINE:X64  /machine:x64 cmTC_1a383.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 無法開啟檔案 'pthread.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\cmTC_1a383.vcxproj]
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\cmTC_1a383.vcxproj" (預設目標) 建置完成 -- 失敗。
+        
+        建置失敗。
+        
+        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\cmTC_1a383.vcxproj" (預設目標) (1) ->
+        (Link 目標) -> 
+          LINK : fatal error LNK1104: 無法開啟檔案 'pthread.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\hw2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1z29b\\cmTC_1a383.vcxproj]
+        
+            0 個警告
+            1 個錯誤
+        
+        經過時間 00:00:00.43
+        
+      exitCode: 1
+...

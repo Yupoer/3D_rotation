@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\QZa\Desktop\BZ\3D Engine\hw2\build\CMakeFiles\58155c800a5409fcadb4ec7c6f03fbd1\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{918843A8-C37C-3702-B895-F62764B7B355}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

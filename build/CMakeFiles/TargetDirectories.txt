@@ -1,0 +1,3 @@
+C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/3DRender.dir
+C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/QZa/Desktop/BZ/3D Engine/hw2/build/CMakeFiles/ZERO_CHECK.dir
