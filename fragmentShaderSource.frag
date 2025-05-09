@@ -4,10 +4,8 @@ in vec3 Normal;
 in vec3 FragPos;
 in vec2 TexCoord;
 
-uniform sampler2D miniTex;
 uniform sampler2D roomTex;
 uniform bool isRoom;
-uniform bool isbox;
 
 uniform vec3 ambientColor;
 uniform vec3 lightPos;
@@ -18,7 +16,6 @@ uniform vec3 cameraPos;
 uniform vec3 objColor;
 uniform bool light1Enabled; // 第一個光源開關
 uniform bool light2Enabled; // 第二個光源開關
-
 
 out vec4 FragColor;
 
@@ -81,12 +78,7 @@ void main() {
             // 地板：保持原始貼圖效果
             finalColor = vec4(texColor.rgb * lighting, texColor.a);
         }
-    } 
-    else if (isbox) {
-        vec4 texColor = texture(miniTex, TexCoord);
-        finalColor = vec4(texColor.rgb * lighting, texColor.a);
-    }
-    else { //ball
+    } else {
         vec4 texColor = vec4(objColor, 1.0);
         finalColor = vec4(texColor.rgb * lighting, texColor.a);
     }

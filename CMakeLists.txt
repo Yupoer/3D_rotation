@@ -25,7 +25,6 @@ add_executable(3DRender
     main.cpp
     Shader.cpp
     Camera.cpp
-    DrawBall.cpp
     ${IMGUI_SOURCES}
 )
 
@@ -53,3 +52,10 @@ foreach(RESOURCE ${RESOURCE_FILES})
     configure_file(${CMAKE_SOURCE_DIR}/${RESOURCE} ${CMAKE_BINARY_DIR}/Release/${RESOURCE} COPYONLY)
     configure_file(${CMAKE_SOURCE_DIR}/${RESOURCE} ${CMAKE_BINARY_DIR}/Debug/${RESOURCE} COPYONLY)
 endforeach()
+
+add_custom_target(run
+    COMMAND ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}
+    DEPENDS ${CMAKE_PROJECT_NAME}
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT "Running ${CMAKE_PROJECT_NAME}..."
+)

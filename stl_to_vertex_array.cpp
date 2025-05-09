@@ -8,7 +8,6 @@
 #include <string>
 #include <iomanip>
 #include <cstdint>
-#include <filesystem>
 
 struct Vec3 {
     float x, y, z;
@@ -109,11 +108,11 @@ std::vector<float> convertToVertexArray(const std::vector<Triangle>& tris) {
     return data;
 }
 
-void exportToHeader(const std::vector<float>& vertexArray, const std::string& outputPath) {
+void exportToHeader(const std::vector<float>& vertexArray, const std::string& outputPath, const std::string& variableName) {
     std::ofstream out(outputPath);
     out << "#pragma once\n";
-    out << "const int vertexCount = " << (vertexArray.size() / 8) << ";\n";
-    out << "const float vertices[] = {\n";
+    out << "const int " << variableName << "Count = " << (vertexArray.size() / 8) << ";\n";
+    out << "const float " << variableName << "Vertices[] = {\n";
     for (size_t i = 0; i < vertexArray.size(); ++i) {
         out << std::fixed << std::setprecision(1) << vertexArray[i] << "f";
         if (i + 1 < vertexArray.size()) out << ", ";
@@ -123,13 +122,30 @@ void exportToHeader(const std::vector<float>& vertexArray, const std::string& ou
 }
 
 int main(int argc, char** argv) {
-    if (argc < 3) {
-        std::cerr << "Usage: " << argv[0] << " <model.stl> <output.h>\n";
+    if (argc < 2) {
+        std::cerr << "Usage: " << argv[0] << " <model.stl> [output.h]\n";
         return 1;
     }
 
     std::string path = argv[1];
-    std::string output = argv[2];
+    std::string output;
+    
+    // 從檔案名稱中提取不含副檔名的部分（不使用 std::filesystem）
+    std::string baseName;
+    size_t lastSlash = path.find_last_of("/\\");
+    size_t lastDot = path.find_last_of(".");
+    if (lastSlash != std::string::npos) {
+        baseName = path.substr(lastSlash + 1, lastDot - lastSlash - 1);
+    } else {
+        baseName = path.substr(0, lastDot);
+    }
+    
+    if (argc >= 3) {
+        output = argv[2];
+    } else {
+        output = baseName + ".h";
+    }
+    
     std::vector<Triangle> triangles;
 
     if (isBinarySTL(path)) {
@@ -139,7 +155,7 @@ int main(int argc, char** argv) {
     }
 
     std::vector<float> vertexArray = convertToVertexArray(triangles);
-    exportToHeader(vertexArray, output);
+    exportToHeader(vertexArray, output, baseName);
 
     std::cout << "Header file generated: " << output << "\n";
     return 0;
