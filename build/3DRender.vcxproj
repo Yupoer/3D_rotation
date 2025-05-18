@@ -384,6 +384,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\main.cpp" />
     <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\Shader.cpp" />
     <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\Camera.cpp" />
+    <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsManager.cpp" />
+    <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsBall.cpp" />
+    <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsIrregularObject.cpp" />
     <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\imgui\imgui.cpp" />
     <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\imgui\imgui_draw.cpp" />
     <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\imgui\imgui_tables.cpp" />

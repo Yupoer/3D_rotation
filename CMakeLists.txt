@@ -25,6 +25,9 @@ add_executable(3DRender
     main.cpp
     Shader.cpp
     Camera.cpp
+    PhysicsManager.cpp
+    PhysicsBall.cpp
+    PhysicsIrregularObject.cpp
     ${IMGUI_SOURCES}
 )
 

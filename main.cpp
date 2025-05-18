@@ -2,7 +2,7 @@
 #define STB_IMAGE_IMPLEMENTATION 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "Shader.h"
+#include "Shader.h" // 假設您的 Shader class 有 setInt, setVec3, setMat4 等方法
 #include "stb_image.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -12,13 +12,20 @@
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
-#include "ball.h"
+
+#include "ball.h"       
+#include "irregular.h"  
+#include "room.h"       // 假設 room.h 包含 roomVertices
 #include "AABB.h"
-#include "vector"
-#include "irregular.h"
-#include "room.h"
+#include "OBB.h"
+#include "GameObject.h" 
+#include "PhysicsBall.h" 
+#include "PhysicsIrregularObject.h" 
+#include "PhysicsManager.h"
 
-
+#include <vector> // 確保包含 vector
+#include <chrono> // 用於精確計時和睡眠 (FPS 限制)
+#include <thread> // 用於 std::this_thread::sleep_for (FPS 限制)
 
 #pragma region Input Declare
 
@@ -52,31 +59,47 @@ unsigned int LoadImageToGPU(const char* filename, GLint internalFormat, GLenum f
     return TexBuffer;
 }
 
-float x = 7.2f, y = 6.3f, z = 4.8f;
-// Room AABB from -5 to 5 in all dimensions
-AABB roomAABB(glm::vec3(x-10.0f, y-10.0f, z-10.0f), glm::vec3(x, y, z)); 
+// Physics controls for GUI
+bool pausePhysics = false; // 由 ImGui 控制
+// float gravityStrength = 9.8f; // 如果需要可調重力，可以在 PhysicsManager 或 ImGui 中處理
+bool resetBallAndIrr = false; // 用於 ImGui 按鈕觸發重置
+bool externalForceApplied = false; // 跟蹤外部力是否已施加
 
-// Time tracking for physics
-float deltaTime = 0.0f;
-float lastFrame = 0.0f;
+bool light1Enabled = true; 
+bool light2Enabled = true; 
 
-// Add physics controls for GUI
-bool pausePhysics = false;
-float gravityStrength = 9.8f;
-bool resetBall = false;
+// FPS 限制相關
+const float TARGET_FPS = 30.0f;
+const float TARGET_FRAME_TIME_SECONDS = 1.0f / TARGET_FPS;
 
-// Removed ball and mini room related variables
-bool light1Enabled = true; // 第一個光源開關
-bool light2Enabled = true; // 第二個光源開關
+
+// Room AABB 初始化
+AABB roomAABB(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(10.0f, 10.0f, 10.0f)); 
+// 全域物理物件和碰撞體實例
+AABB global_ball_aabb_instance; 
+OBB  global_irr_obb_instance;   
+PhysicsManager physicsManager_instance; 
+
+PhysicsBall* actual_phys_ball = nullptr;
+PhysicsIrregularObject* actual_phys_irr = nullptr;
+
+// 輔助函數：將 C 風格 float 陣列轉換為 glm::vec3 (來自 PhysicsBall.cpp)
+glm::vec3 cArrayToVec3_main(const float* arr) {
+    if (arr) {
+        return glm::vec3(arr[0], arr[1], arr[2]);
+    }
+    return glm::vec3(0.0f);
+}
+
 
 #pragma region Helper Function to Create VAO and VBO
-void setupModelBuffers(unsigned int& VAO, unsigned int& VBO, const float* vertices, int vertexCount) {
+void setupModelBuffers(unsigned int& VAO, unsigned int& VBO, const float* vertices_data, int vertexCount) {
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     
     glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices[0]) * vertexCount * 8, vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertexCount * 8, vertices_data, GL_STATIC_DRAW);
     
     // 位置屬性
     glVertexAttribPointer(6, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
@@ -91,7 +114,6 @@ void setupModelBuffers(unsigned int& VAO, unsigned int& VBO, const float* vertic
     glEnableVertexAttribArray(9);
     
     glBindVertexArray(0);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 #pragma endregion
 
@@ -148,8 +170,7 @@ int main() {
     
     #pragma endregion
     
-    // Room AABB 初始化
-    AABB roomAABB(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(10.0f, 10.0f, 10.0f)); 
+    
 
     #pragma region Init and load Model to VAO & VBO
     // room VAO & VBO
@@ -165,6 +186,14 @@ int main() {
     setupModelBuffers(ballVAO, ballVBO, ballVertices, ballCount);
     #pragma endregion
 
+
+    // 創建物理物件
+    actual_phys_ball = new PhysicsBall("ball_01", &global_ball_aabb_instance, 1.0f, 0.8f);
+    physicsManager_instance.addObject(actual_phys_ball);
+
+    actual_phys_irr = new PhysicsIrregularObject("irr_01", &global_irr_obb_instance, 2.0f, 0.4f);
+    physicsManager_instance.addObject(actual_phys_irr);
+
     #pragma region Init and Load Texture
     unsigned int TexBufferA;
     unsigned int TexBufferB;
@@ -178,28 +207,16 @@ int main() {
     Camera camera(position, glm::radians(0.0f), glm::radians(0.0f), worldup);
     #pragma endregion
 
-    #pragma region Prepare MVP(model view proj) Matrices
-    glm::mat4 viewMat = glm::mat4(1.0f);
-    viewMat = camera.GetViewMatrix();
-
-    glm::mat4 modelMat = glm::mat4(1.0f);
-    //modelMat = glm::rotate(modelMat, glm::radians(45.0f), glm::vec3(0.0f, 0.5f, 1.0f));
-
-    glm::mat4 projMat = glm::mat4(1.0f);
-    // 透視投影（FOV 45 度，寬高比 1600/1200，近裁剪面 0.1，遠裁剪面 100）
-    projMat = glm::perspective(glm::radians(60.0f), 1600.0f / 1200.0f, 0.1f, 100.0f);
-    #pragma endregion
     
-    // Time initialization
-    lastFrame = glfwGetTime();
+    // 時間相關變數
+    float lastFrameTimestamp = static_cast<float>(glfwGetTime());
+    float deltaTime = 0.0f; // 將在迴圈中計算
     
     // Removed ball initialization
 
     while (!glfwWindowShouldClose(window)) {
-        // Calculate delta time
-        float currentFrame = glfwGetTime();
-        deltaTime = currentFrame - lastFrame;
-        lastFrame = currentFrame;
+        float currentFrameTimestamp = static_cast<float>(glfwGetTime());
+        deltaTime = currentFrameTimestamp - lastFrameTimestamp;
 
         // Process input
         processInput(window);
@@ -214,128 +231,148 @@ int main() {
         ImGui::NewFrame();
 
         ImGui::Begin("Control", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
-        ImGui::SetWindowPos(ImVec2(10, 10));
-        ImGui::SetWindowSize(ImVec2(300, 400));
 
-        // 相機控制（僅控制主攝影機）
-        ImGui::Text("Adjust Main Camera Position (Top-Left View)");
-        ImGui::SliderFloat3("Camera Position", &camera.Position[0], -10.0f, 10.0f);
-        viewMat = camera.GetViewMatrix();
+        if (ImGui::CollapsingHeader("Camera Controls")) {
+            ImGui::Text("Adjust Camera Position");
+            ImGui::SliderFloat3("##CamPos", &camera.Position[0], -30.0f, 30.0f); // 增加範圍
+            // viewMat = camera.GetViewMatrix(); // 在渲染前統一獲取
 
-        ImGui::Text("Adjust Camera Pitch and Yaw");
-        float pitch_deg = glm::degrees(camera.Pitch);
-        float yaw_deg = glm::degrees(camera.Yaw);
-        bool camera_updated = false;
-        if (ImGui::SliderFloat("Pitch", &pitch_deg, -89.0f, 89.0f)) {
-            camera.Pitch = glm::radians(pitch_deg);
-            camera_updated = true;
+            ImGui::Text("Adjust Camera Pitch and Yaw");
+            float pitch_deg = glm::degrees(camera.Pitch);
+            float yaw_deg = glm::degrees(camera.Yaw);
+            bool camera_updated = false;
+            if (ImGui::SliderFloat("Pitch", &pitch_deg, -89.0f, 89.0f)) {
+                camera.Pitch = glm::radians(pitch_deg);
+                camera_updated = true;
+            }
+            if (ImGui::SliderFloat("Yaw", &yaw_deg, -360.0f, 360.0f)) { // 擴大 Yaw 範圍
+                camera.Yaw = glm::radians(yaw_deg);
+                camera_updated = true;
+            }
+            if (camera_updated) {
+                camera.UpdateCameraVectors();
+            }
+            ImGui::Text("Front: %.2f, %.2f, %.2f", camera.Forward.x, camera.Forward.y, camera.Forward.z);
         }
-        if (ImGui::SliderFloat("Yaw", &yaw_deg, -180.0f, 180.0f)) {
-            camera.Yaw = glm::radians(yaw_deg);
-            camera_updated = true;
-        }
-        if (camera_updated) {
-            camera.UpdateCameraVectors();
-            viewMat = camera.GetViewMatrix();
-        }
-
-        ImGui::Separator();
-        ImGui::Text("Light Controls");
-        ImGui::Checkbox("Light 1 Enabled", &light1Enabled);
-        ImGui::Checkbox("Light 2 Enabled", &light2Enabled);
-
-        // Removed physics controls
         
-        ImGui::Text("Camera Pitch: %.2f degrees", glm::degrees(camera.Pitch));
-        ImGui::Text("Camera Yaw: %.2f degrees", glm::degrees(camera.Yaw));
+        if (ImGui::CollapsingHeader("Light Controls")) {
+            ImGui::Checkbox("Light 1 Enabled", &light1Enabled);
+            ImGui::Checkbox("Light 2 Enabled", &light2Enabled);
+        }
+
+        if (ImGui::CollapsingHeader("Physics Controls")) {
+            ImGui::Checkbox("Pause Physics", &pausePhysics); 
+            if (ImGui::Button("Reset Objects & Force")) {
+                if (actual_phys_ball) {
+                    actual_phys_ball->position = cArrayToVec3_main(ballCenterMass); 
+                    actual_phys_ball->orientation = glm::quat(1.0f, 0.0f, 0.0f, 0.0f);
+                    actual_phys_ball->linearVelocity = glm::vec3(0.0f);
+                    actual_phys_ball->angularVelocity = glm::vec3(0.0f);
+                    actual_phys_ball->internalUpdate(0.0f); 
+                }
+                if (actual_phys_irr) {                
+                    glm::vec3 irr_initial_com = glm::vec3(2.0f, 1.0f, 5.0f); // 示例值，應從數據或計算得到
+                    if (irregularCount > 0) { // 從 irregularVertices 計算幾何中心作為近似質心
+                        glm::vec3 sum_v(0.0f);
+                        for(int i=0; i<irregularCount*8; i+=8) sum_v += glm::vec3(irregularVertices[i], irregularVertices[i+1], irregularVertices[i+2]);
+                        irr_initial_com = sum_v / (float)irregularCount;
+                    }
+                    actual_phys_irr->position = irr_initial_com;
+
+                    actual_phys_irr->orientation = glm::quat(1.0f, 0.0f, 0.0f, 0.0f);
+                    actual_phys_irr->linearVelocity = glm::vec3(0.0f);
+                    actual_phys_irr->angularVelocity = glm::vec3(0.0f);
+                    actual_phys_irr->internalUpdate(0.0f);
+                }
+                externalForceApplied = false; 
+                std::cout << "Objects and force state reset." << std::endl;
+            }
+            ImGui::Text("Press SPACE to apply jump force.");
+            ImGui::Text("Press N to allow re-applying jump force.");
+        }
         
         ImGui::End();
         #pragma endregion
     
         // 設置視口為整個窗口
-        glViewport(0, 0, 1600, 1200);
+        glm::mat4 viewMat = camera.GetViewMatrix();
+        glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 1600.0f / 1200.0f, 0.1f, 100.0f);
         
-        #pragma region Create room
-        modelMat = glm::mat4(1.0f);
-        modelMat = glm::translate(modelMat, glm::vec3(5.0f, 5.0f, 5.0f)); // 將房間中心從(0,0,0)移動到(5,5,5)，使範圍為(0,0,0)到(10,10,10)
+        // 物理更新
+        if (!pausePhysics) {
+            if (!externalForceApplied && glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+                if (actual_phys_ball) {
+                    glm::vec3 ballForceAppPointLocal(0.1f, -actual_phys_ball->actualRadius * 0.8f , 0.0f); // 施力點在底部附近
+                    physicsManager_instance.applyExternalForceLocal(actual_phys_ball, glm::vec3(0.0f, 20.0f, 0.0f), ballForceAppPointLocal); // 調整力的大小
+                     std::cout << "Applied force to ball. Radius: " << actual_phys_ball->actualRadius << std::endl;
+                }
+                if (actual_phys_irr && actual_phys_irr->boundingBoxOBB) { // 確保 OBB 有效
+                    glm::vec3 irrForceAppPointLocal(actual_phys_irr->boundingBoxOBB->extents.x * 0.3f, -actual_phys_irr->boundingBoxOBB->extents.y * 0.8f, 0.0f);
+                    physicsManager_instance.applyExternalForceLocal(actual_phys_irr, glm::vec3(0.0f, 25.0f, 0.0f), irrForceAppPointLocal);
+                     std::cout << "Applied force to irregular. ExtentsY: " << actual_phys_irr->boundingBoxOBB->extents.y << std::endl;
+                }
+                externalForceApplied = true; 
+            }
+            if (glfwGetKey(window, GLFW_KEY_N) == GLFW_PRESS) { // 允許再次施力
+                 externalForceApplied = false;
+                 std::cout << "Force application re-enabled." << std::endl;
+            }
+            physicsManager_instance.update(deltaTime); // 使用實際的 deltaTime
+        }
 
         myShader->use();
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, TexBufferA);
-        glUniform1i(glGetUniformLocation(myShader->ID, "roomTex"), 0);
-        glUniform1i(glGetUniformLocation(myShader->ID, "isRoom"), 1);
-        glUniform1i(glGetUniformLocation(myShader->ID, "isbox"), 0);
-        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "modelMat"), 1, GL_FALSE, glm::value_ptr(modelMat));
         glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "viewMat"), 1, GL_FALSE, glm::value_ptr(viewMat));
-        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "projMat"), 1, GL_FALSE, glm::value_ptr(projMat)); // 透視投影
-
-        glUniform3f(glGetUniformLocation(myShader->ID, "objColor"), 0.5f, 0.5f, 0.5f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "ambientColor"), 1.0f, 1.0f, 1.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightPos"), 0.0f, 0.0f, 0.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightColor"), 0.5f, 0.5f, 0.5f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightPos2"), 0.0f, 0.0f, 0.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightColor2"), 0.2f, 0.7f, 0.9f);
+        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "projMat"), 1, GL_FALSE, glm::value_ptr(projMat));
         glUniform3f(glGetUniformLocation(myShader->ID, "cameraPos"), camera.Position.x, camera.Position.y, camera.Position.z);
         glUniform1i(glGetUniformLocation(myShader->ID, "light1Enabled"), light1Enabled);
         glUniform1i(glGetUniformLocation(myShader->ID, "light2Enabled"), light2Enabled);
+        glUniform3f(glGetUniformLocation(myShader->ID, "lightPos"), 0.0f, 10.0f, 0.0f); // 調整光源位置
+        glUniform3f(glGetUniformLocation(myShader->ID, "lightColor"), 0.8f, 0.8f, 0.8f);
+        glUniform3f(glGetUniformLocation(myShader->ID, "lightPos2"), 10.0f, 5.0f, 10.0f); 
+        glUniform3f(glGetUniformLocation(myShader->ID, "lightColor2"), 0.5f, 0.5f, 0.9f);
+        glUniform3f(glGetUniformLocation(myShader->ID, "ambientColor"), 0.15f, 0.15f, 0.15f);
 
+        #pragma region Create room
+        glm::mat4 roomModelMat = glm::mat4(1.0f);
+        roomModelMat = glm::translate(roomModelMat, glm::vec3(5.0f, 5.0f, 5.0f)); 
+        glUniform1i(glGetUniformLocation(myShader->ID, "isRoom"), 1);
+        glUniform1i(glGetUniformLocation(myShader->ID, "isbox"), 0); 
+        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "modelMat"), 1, GL_FALSE, glm::value_ptr(roomModelMat));
+        
+        glActiveTexture(GL_TEXTURE0); 
+        glBindTexture(GL_TEXTURE_2D, TexBufferA); 
+        glUniform1i(glGetUniformLocation(myShader->ID, "diffuseTexture"), 0); 
+        glUniform1i(glGetUniformLocation(myShader->ID, "useTexture"), 1); 
         glBindVertexArray(roomVAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
         #pragma endregion
+        
+        glUniform1i(glGetUniformLocation(myShader->ID, "isRoom"), 0);  
+        glUniform1i(glGetUniformLocation(myShader->ID, "diffuseTexture"), 0);
 
         #pragma region Draw Irregular Object
-        myShader->use();
-        glUniform1i(glGetUniformLocation(myShader->ID, "isRoom"), 0);
-        glUniform1i(glGetUniformLocation(myShader->ID, "isbox"), 0);
-        glUniform3f(glGetUniformLocation(myShader->ID, "objColor"), 0.8f, 0.2f, 0.2f); // 紅色
-        glm::mat4 irregularModelMat = glm::translate(glm::mat4(1.0f), glm::vec3(5.0f, 2.0f, 5.0f)); // 放置在房間的新底部中心
-        irregularModelMat = glm::rotate(irregularModelMat, glm::radians(180.0f), glm::vec3(1.0f, 0.0f, 0.0f)); // 繞 X 軸旋轉 180 度
-        irregularModelMat = glm::scale(irregularModelMat, glm::vec3(0.1f, 0.1f, 0.1f)); // 縮小到原本尺寸的50%
-        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "modelMat"), 1, GL_FALSE, glm::value_ptr(irregularModelMat));
-        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "viewMat"), 1, GL_FALSE, glm::value_ptr(viewMat));
-        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "projMat"), 1, GL_FALSE, glm::value_ptr(projMat));
-        glUniform3f(glGetUniformLocation(myShader->ID, "ambientColor"), 1.0f, 1.0f, 1.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightPos"), 0.0f, 0.0f, 0.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightColor"), 0.5f, 0.5f, 0.5f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightPos2"), 0.0f, 0.0f, 0.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightColor2"), 0.2f, 0.7f, 0.9f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "cameraPos"), camera.Position.x, camera.Position.y, camera.Position.z);
-        glUniform1i(glGetUniformLocation(myShader->ID, "light1Enabled"), light1Enabled);
-        glUniform1i(glGetUniformLocation(myShader->ID, "light2Enabled"), light2Enabled);
-
-        glBindVertexArray(irregularVAO);
-        glDrawArrays(GL_TRIANGLES, 0, irregularCount * 3);
+        if (actual_phys_irr) { 
+            glUniform3fv(glGetUniformLocation(myShader->ID, "objColor"), 1, glm::value_ptr(actual_phys_irr->color)); 
+            glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "modelMat"), 1, GL_FALSE, glm::value_ptr(actual_phys_irr->getModelMatrix()));
+            glBindVertexArray(irregularVAO);
+            glDrawArrays(GL_TRIANGLES, 0, irregularCount); 
+        }
         #pragma endregion
 
         #pragma region Draw Ball Object
-        myShader->use();
-        glUniform1i(glGetUniformLocation(myShader->ID, "isRoom"), 0);
-        glUniform1i(glGetUniformLocation(myShader->ID, "isbox"), 0);
-        glUniform3f(glGetUniformLocation(myShader->ID, "objColor"), 0.2f, 0.8f, 0.2f); // 綠色
-        glm::mat4 ballModelMat = glm::translate(glm::mat4(1.0f), glm::vec3(7.0f, 4.0f, 7.0f)); // 放置在房間的新底部，稍微偏移
-        ballModelMat = glm::scale(ballModelMat, glm::vec3(0.3f, 0.3f, 0.3f)); // 縮小到原本尺寸的30%
-        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "modelMat"), 1, GL_FALSE, glm::value_ptr(ballModelMat));
-        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "viewMat"), 1, GL_FALSE, glm::value_ptr(viewMat));
-        glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "projMat"), 1, GL_FALSE, glm::value_ptr(projMat));
-        glUniform3f(glGetUniformLocation(myShader->ID, "ambientColor"), 1.0f, 1.0f, 1.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightPos"), 0.0f, 0.0f, 0.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightColor"), 0.5f, 0.5f, 0.5f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightPos2"), 0.0f, 0.0f, 0.0f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "lightColor2"), 0.2f, 0.7f, 0.9f);
-        glUniform3f(glGetUniformLocation(myShader->ID, "cameraPos"), camera.Position.x, camera.Position.y, camera.Position.z);
-        glUniform1i(glGetUniformLocation(myShader->ID, "light1Enabled"), light1Enabled);
-        glUniform1i(glGetUniformLocation(myShader->ID, "light2Enabled"), light2Enabled);
-
-        glBindVertexArray(ballVAO);
-        glDrawArrays(GL_TRIANGLES, 0, ballCount * 3);
+        if (actual_phys_ball) { 
+            glUniform3fv(glGetUniformLocation(myShader->ID, "objColor"), 1, glm::value_ptr(actual_phys_ball->color)); 
+            glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "modelMat"), 1, GL_FALSE, glm::value_ptr(actual_phys_ball->getModelMatrix()));
+            glBindVertexArray(ballVAO);
+            glDrawArrays(GL_TRIANGLES, 0, ballCount); 
+        }
         #pragma endregion
         
         glBindVertexArray(0);
         
-        // 檢查 OpenGL 錯誤
         GLenum err;
         while ((err = glGetError()) != GL_NO_ERROR) {
-            std::cerr << "OpenGL Error: " << err << std::endl;
+            std::cerr << "OpenGL Error in main loop: " << err << std::endl;
         }
         
         #pragma region Render ImGui
@@ -345,6 +382,18 @@ int main() {
 
         glfwSwapBuffers(window);
         glfwPollEvents();
+
+        float frameProcessingTime = static_cast<float>(glfwGetTime()) - currentFrameTimestamp;
+        if (frameProcessingTime < TARGET_FRAME_TIME_SECONDS) {
+            // 使用 chrono 進行更精確的睡眠
+            std::chrono::duration<double> sleep_duration_seconds(TARGET_FRAME_TIME_SECONDS - frameProcessingTime);
+            // 轉換為微秒，因為 sleep_for 通常接受整數微秒或毫秒
+            auto sleep_duration_microseconds = std::chrono::duration_cast<std::chrono::microseconds>(sleep_duration_seconds);
+            if (sleep_duration_microseconds.count() > 0) { // 只有當需要睡眠時才執行
+                 std::this_thread::sleep_for(sleep_duration_microseconds);
+            }
+        }
+        lastFrameTimestamp = static_cast<float>(glfwGetTime());
     }
 
     //Exit program

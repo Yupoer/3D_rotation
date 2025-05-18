@@ -1,5 +1,9 @@
 #pragma once
 const int ballCount = 864;
+const float ballMin[] = {-9.848000f, -3.698000f, -0.000000f};
+const float ballMax[] = {0.152000f, 6.302000f, 10.000000f};
+const float ballCenter[] = {-4.848000f, 1.302000f, 5.000000f};
+const float ballCenterMass[] = {-4.848931f, 1.301660f, 5.000000f};
 const float ballVertices[] = {
 -5.7f, -3.7f, 4.1f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 
 -4.0f, -3.7f, 4.1f, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 

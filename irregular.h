@@ -1,6 +1,9 @@
 #pragma once
 const int irregularCount = 60;
-
+const float irregularMin[] = {-14.000000f, -15.000000f, 0.000000f};
+const float irregularMax[] = {6.000000f, 5.000000f, 20.000000f};
+const float irregularCenter[] = {-4.000000f, -5.000000f, 10.000000f};
+const float irregularCenterMass[] = {-4.334434f, -5.000000f, 9.665933f};
 const float irregularVertices[] = {
 -14.0f, 5.0f, 20.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f, 
 -14.0f, 5.0f, 0.0f, 1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 

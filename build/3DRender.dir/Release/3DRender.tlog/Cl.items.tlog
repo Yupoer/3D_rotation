@@ -1,6 +1,9 @@
 C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\main.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\main.obj
 C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\Shader.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\Shader.obj
 C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\Camera.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\Camera.obj
+C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsManager.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\PhysicsManager.obj
+C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsBall.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\PhysicsBall.obj
+C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsIrregularObject.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\PhysicsIrregularObject.obj
 C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\imgui\imgui.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\imgui.obj
 C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\imgui\imgui_draw.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\imgui_draw.obj
 C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\imgui\imgui_tables.cpp;C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\build\3DRender.dir\Release\imgui_tables.obj

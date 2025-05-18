@@ -10,6 +10,15 @@
     <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsBall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\PhysicsIrregularObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\QZa\Desktop\BZ\3D Engine\3D_rotation\imgui\imgui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -24,7 +24,7 @@ events:
       The output was:
       0
       .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
-      已經開始建置於 2025/5/10 上午 07:02:17。
+      已經開始建置於 2025/5/18 下午 11:08:06。
       
       節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\4.0.0\\CompilerIdC\\CompilerIdC.vcxproj"。
       PrepareForBuild:
@@ -61,7 +61,7 @@ events:
           0 個警告
           0 個錯誤
       
-      經過時間 00:00:00.91
+      經過時間 00:00:01.04
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -87,7 +87,7 @@ events:
       The output was:
       0
       .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
-      已經開始建置於 2025/5/10 上午 07:02:18。
+      已經開始建置於 2025/5/18 下午 11:08:08。
       
       節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\4.0.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj"。
       PrepareForBuild:
@@ -124,7 +124,7 @@ events:
           0 個警告
           0 個錯誤
       
-      經過時間 00:00:00.93
+      經過時間 00:00:00.99
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -143,8 +143,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-qijx2c"
-      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-qijx2c"
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-iv6o5p"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-iv6o5p"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -157,34 +157,34 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-qijx2c'
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-iv6o5p'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a79d3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b822e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
-        已經開始建置於 2025/5/10 上午 07:02:19。
+        已經開始建置於 2025/5/18 下午 11:08:09。
         
-        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qijx2c\\cmTC_a79d3.vcxproj"。
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iv6o5p\\cmTC_b822e.vcxproj"。
         PrepareForBuild:
-          正在建立目錄 "cmTC_a79d3.dir\\Debug\\"。
+          正在建立目錄 "cmTC_b822e.dir\\Debug\\"。
           結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
-          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qijx2c\\Debug\\"。
-          正在建立目錄 "cmTC_a79d3.dir\\Debug\\cmTC_a79d3.tlog\\"。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iv6o5p\\Debug\\"。
+          正在建立目錄 "cmTC_b822e.dir\\Debug\\cmTC_b822e.tlog\\"。
         InitializeBuildStatus:
-          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_a79d3.dir\\Debug\\cmTC_a79d3.tlog\\unsuccessfulbuild"。
-          正在變更時間戳記 "cmTC_a79d3.dir\\Debug\\cmTC_a79d3.tlog\\unsuccessfulbuild"。
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_b822e.dir\\Debug\\cmTC_b822e.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_b822e.dir\\Debug\\cmTC_b822e.tlog\\unsuccessfulbuild"。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a79d3.dir\\Debug\\\\" /Fd"cmTC_a79d3.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b822e.dir\\Debug\\\\" /Fd"cmTC_b822e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
           Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a79d3.dir\\Debug\\\\" /Fd"cmTC_a79d3.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b822e.dir\\Debug\\\\" /Fd"cmTC_b822e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qijx2c\\Debug\\cmTC_a79d3.exe" /INCREMENTAL /ILK:"cmTC_a79d3.dir\\Debug\\cmTC_a79d3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-qijx2c/Debug/cmTC_a79d3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-qijx2c/Debug/cmTC_a79d3.lib" /MACHINE:X64  /machine:x64 cmTC_a79d3.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_a79d3.vcxproj -> C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qijx2c\\Debug\\cmTC_a79d3.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iv6o5p\\Debug\\cmTC_b822e.exe" /INCREMENTAL /ILK:"cmTC_b822e.dir\\Debug\\cmTC_b822e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-iv6o5p/Debug/cmTC_b822e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-iv6o5p/Debug/cmTC_b822e.lib" /MACHINE:X64  /machine:x64 cmTC_b822e.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_b822e.vcxproj -> C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iv6o5p\\Debug\\cmTC_b822e.exe
         FinalizeBuildStatus:
-          正在刪除檔案 "cmTC_a79d3.dir\\Debug\\cmTC_a79d3.tlog\\unsuccessfulbuild"。
-          正在變更時間戳記 "cmTC_a79d3.dir\\Debug\\cmTC_a79d3.tlog\\cmTC_a79d3.lastbuildstate"。
-        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qijx2c\\cmTC_a79d3.vcxproj" (預設目標) 建置完成。
+          正在刪除檔案 "cmTC_b822e.dir\\Debug\\cmTC_b822e.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_b822e.dir\\Debug\\cmTC_b822e.tlog\\cmTC_b822e.lastbuildstate"。
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iv6o5p\\cmTC_b822e.vcxproj" (預設目標) 建置完成。
         
         建置成功。
             0 個警告
@@ -230,8 +230,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-3y9nha"
-      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-3y9nha"
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-9ziwcx"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-9ziwcx"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -245,40 +245,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-3y9nha'
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-9ziwcx'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9c67b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_bab60.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
-        已經開始建置於 2025/5/10 上午 07:02:20。
+        已經開始建置於 2025/5/18 下午 11:08:10。
         
-        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3y9nha\\cmTC_9c67b.vcxproj"。
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ziwcx\\cmTC_bab60.vcxproj"。
         PrepareForBuild:
-          正在建立目錄 "cmTC_9c67b.dir\\Debug\\"。
+          正在建立目錄 "cmTC_bab60.dir\\Debug\\"。
           結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
-          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3y9nha\\Debug\\"。
-          正在建立目錄 "cmTC_9c67b.dir\\Debug\\cmTC_9c67b.tlog\\"。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ziwcx\\Debug\\"。
+          正在建立目錄 "cmTC_bab60.dir\\Debug\\cmTC_bab60.tlog\\"。
         InitializeBuildStatus:
-          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_9c67b.dir\\Debug\\cmTC_9c67b.tlog\\unsuccessfulbuild"。
-          正在變更時間戳記 "cmTC_9c67b.dir\\Debug\\cmTC_9c67b.tlog\\unsuccessfulbuild"。
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_bab60.dir\\Debug\\cmTC_bab60.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_bab60.dir\\Debug\\cmTC_bab60.tlog\\unsuccessfulbuild"。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9c67b.dir\\Debug\\\\" /Fd"cmTC_9c67b.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bab60.dir\\Debug\\\\" /Fd"cmTC_bab60.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
           Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9c67b.dir\\Debug\\\\" /Fd"cmTC_9c67b.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bab60.dir\\Debug\\\\" /Fd"cmTC_bab60.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3y9nha\\Debug\\cmTC_9c67b.exe" /INCREMENTAL /ILK:"cmTC_9c67b.dir\\Debug\\cmTC_9c67b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-3y9nha/Debug/cmTC_9c67b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-3y9nha/Debug/cmTC_9c67b.lib" /MACHINE:X64  /machine:x64 cmTC_9c67b.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_9c67b.vcxproj -> C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3y9nha\\Debug\\cmTC_9c67b.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ziwcx\\Debug\\cmTC_bab60.exe" /INCREMENTAL /ILK:"cmTC_bab60.dir\\Debug\\cmTC_bab60.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-9ziwcx/Debug/cmTC_bab60.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-9ziwcx/Debug/cmTC_bab60.lib" /MACHINE:X64  /machine:x64 cmTC_bab60.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_bab60.vcxproj -> C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ziwcx\\Debug\\cmTC_bab60.exe
         FinalizeBuildStatus:
-          正在刪除檔案 "cmTC_9c67b.dir\\Debug\\cmTC_9c67b.tlog\\unsuccessfulbuild"。
-          正在變更時間戳記 "cmTC_9c67b.dir\\Debug\\cmTC_9c67b.tlog\\cmTC_9c67b.lastbuildstate"。
-        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3y9nha\\cmTC_9c67b.vcxproj" (預設目標) 建置完成。
+          正在刪除檔案 "cmTC_bab60.dir\\Debug\\cmTC_bab60.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_bab60.dir\\Debug\\cmTC_bab60.tlog\\cmTC_bab60.lastbuildstate"。
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ziwcx\\cmTC_bab60.vcxproj" (預設目標) 建置完成。
         
         建置成功。
             0 個警告
             0 個錯誤
         
-        經過時間 00:00:00.55
+        經過時間 00:00:00.53
         
       exitCode: 0
   -
@@ -324,8 +324,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-dnqtkg"
-      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-dnqtkg"
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-jfbkzk"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-jfbkzk"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -338,40 +338,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-dnqtkg'
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-jfbkzk'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_efa93.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f344d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
-        已經開始建置於 2025/5/10 上午 07:02:21。
+        已經開始建置於 2025/5/18 下午 11:08:11。
         
-        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\cmTC_efa93.vcxproj"。
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\cmTC_f344d.vcxproj"。
         PrepareForBuild:
-          正在建立目錄 "cmTC_efa93.dir\\Debug\\"。
+          正在建立目錄 "cmTC_f344d.dir\\Debug\\"。
           結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
-          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\Debug\\"。
-          正在建立目錄 "cmTC_efa93.dir\\Debug\\cmTC_efa93.tlog\\"。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\Debug\\"。
+          正在建立目錄 "cmTC_f344d.dir\\Debug\\cmTC_f344d.tlog\\"。
         InitializeBuildStatus:
-          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_efa93.dir\\Debug\\cmTC_efa93.tlog\\unsuccessfulbuild"。
-          正在變更時間戳記 "cmTC_efa93.dir\\Debug\\cmTC_efa93.tlog\\unsuccessfulbuild"。
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_f344d.dir\\Debug\\cmTC_f344d.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_f344d.dir\\Debug\\cmTC_f344d.tlog\\unsuccessfulbuild"。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_efa93.dir\\Debug\\\\" /Fd"cmTC_efa93.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\src.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f344d.dir\\Debug\\\\" /Fd"cmTC_f344d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
           Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_efa93.dir\\Debug\\\\" /Fd"cmTC_efa93.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\src.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f344d.dir\\Debug\\\\" /Fd"cmTC_f344d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\src.c"
           src.c
-        C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\src.c(1,10): error C1083: 無法開啟包含檔案: 'pthread.h': No such file or directory [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\cmTC_efa93.vcxproj]
-        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\cmTC_efa93.vcxproj" (預設目標) 建置完成 -- 失敗。
+        C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\src.c(1,10): error C1083: 無法開啟包含檔案: 'pthread.h': No such file or directory [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\cmTC_f344d.vcxproj]
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\cmTC_f344d.vcxproj" (預設目標) 建置完成 -- 失敗。
         
         建置失敗。
         
-        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\cmTC_efa93.vcxproj" (預設目標) (1) ->
+        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\cmTC_f344d.vcxproj" (預設目標) (1) ->
         (ClCompile 目標) -> 
-          C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\src.c(1,10): error C1083: 無法開啟包含檔案: 'pthread.h': No such file or directory [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dnqtkg\\cmTC_efa93.vcxproj]
+          C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\src.c(1,10): error C1083: 無法開啟包含檔案: 'pthread.h': No such file or directory [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jfbkzk\\cmTC_f344d.vcxproj]
         
             0 個警告
             1 個錯誤
         
-        經過時間 00:00:00.39
+        經過時間 00:00:00.38
         
       exitCode: 1
   -
@@ -388,8 +388,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-uvtwen"
-      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-uvtwen"
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-isxm9f"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-isxm9f"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -402,42 +402,42 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-uvtwen'
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-isxm9f'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_29f2f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c8238.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
-        已經開始建置於 2025/5/10 上午 07:02:22。
+        已經開始建置於 2025/5/18 下午 11:08:12。
         
-        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\cmTC_29f2f.vcxproj"。
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\cmTC_c8238.vcxproj"。
         PrepareForBuild:
-          正在建立目錄 "cmTC_29f2f.dir\\Debug\\"。
+          正在建立目錄 "cmTC_c8238.dir\\Debug\\"。
           結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
-          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\Debug\\"。
-          正在建立目錄 "cmTC_29f2f.dir\\Debug\\cmTC_29f2f.tlog\\"。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\Debug\\"。
+          正在建立目錄 "cmTC_c8238.dir\\Debug\\cmTC_c8238.tlog\\"。
         InitializeBuildStatus:
-          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_29f2f.dir\\Debug\\cmTC_29f2f.tlog\\unsuccessfulbuild"。
-          正在變更時間戳記 "cmTC_29f2f.dir\\Debug\\cmTC_29f2f.tlog\\unsuccessfulbuild"。
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_c8238.dir\\Debug\\cmTC_c8238.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_c8238.dir\\Debug\\cmTC_c8238.tlog\\unsuccessfulbuild"。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_29f2f.dir\\Debug\\\\" /Fd"cmTC_29f2f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8238.dir\\Debug\\\\" /Fd"cmTC_c8238.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
           Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_29f2f.dir\\Debug\\\\" /Fd"cmTC_29f2f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\CheckFunctionExists.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8238.dir\\Debug\\\\" /Fd"cmTC_c8238.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\Debug\\cmTC_29f2f.exe" /INCREMENTAL /ILK:"cmTC_29f2f.dir\\Debug\\cmTC_29f2f.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-uvtwen/Debug/cmTC_29f2f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-uvtwen/Debug/cmTC_29f2f.lib" /MACHINE:X64  /machine:x64 cmTC_29f2f.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 無法開啟檔案 'pthreads.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\cmTC_29f2f.vcxproj]
-        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\cmTC_29f2f.vcxproj" (預設目標) 建置完成 -- 失敗。
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\Debug\\cmTC_c8238.exe" /INCREMENTAL /ILK:"cmTC_c8238.dir\\Debug\\cmTC_c8238.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-isxm9f/Debug/cmTC_c8238.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-isxm9f/Debug/cmTC_c8238.lib" /MACHINE:X64  /machine:x64 cmTC_c8238.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 無法開啟檔案 'pthreads.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\cmTC_c8238.vcxproj]
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\cmTC_c8238.vcxproj" (預設目標) 建置完成 -- 失敗。
         
         建置失敗。
         
-        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\cmTC_29f2f.vcxproj" (預設目標) (1) ->
+        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\cmTC_c8238.vcxproj" (預設目標) (1) ->
         (Link 目標) -> 
-          LINK : fatal error LNK1104: 無法開啟檔案 'pthreads.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-uvtwen\\cmTC_29f2f.vcxproj]
+          LINK : fatal error LNK1104: 無法開啟檔案 'pthreads.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-isxm9f\\cmTC_c8238.vcxproj]
         
             0 個警告
             1 個錯誤
         
-        經過時間 00:00:00.42
+        經過時間 00:00:00.43
         
       exitCode: 1
   -
@@ -454,8 +454,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-e5zibo"
-      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-e5zibo"
+      source: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-oimr7h"
+      binary: "C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-oimr7h"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -468,42 +468,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-e5zibo'
+        Change Dir: 'C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-oimr7h'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_dbe91.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f8576.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         .NET Framework 的 MSBuild 版本 17.8.3+195e7f5a3
-        已經開始建置於 2025/5/10 上午 07:02:23。
+        已經開始建置於 2025/5/18 下午 11:08:13。
         
-        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\cmTC_dbe91.vcxproj"。
+        節點 1 (預設目標) 上的專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\cmTC_f8576.vcxproj"。
         PrepareForBuild:
-          正在建立目錄 "cmTC_dbe91.dir\\Debug\\"。
+          正在建立目錄 "cmTC_f8576.dir\\Debug\\"。
           結構化輸出已啟用。編譯器診斷的格式化將反映錯誤階層。如需詳細資料，請參閱 https://aka.ms/cpp/structured-output。
-          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\Debug\\"。
-          正在建立目錄 "cmTC_dbe91.dir\\Debug\\cmTC_dbe91.tlog\\"。
+          正在建立目錄 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\Debug\\"。
+          正在建立目錄 "cmTC_f8576.dir\\Debug\\cmTC_f8576.tlog\\"。
         InitializeBuildStatus:
-          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_dbe91.dir\\Debug\\cmTC_dbe91.tlog\\unsuccessfulbuild"。
-          正在變更時間戳記 "cmTC_dbe91.dir\\Debug\\cmTC_dbe91.tlog\\unsuccessfulbuild"。
+          由於指定了 "AlwaysCreate"，因此正在建立 "cmTC_f8576.dir\\Debug\\cmTC_f8576.tlog\\unsuccessfulbuild"。
+          正在變更時間戳記 "cmTC_f8576.dir\\Debug\\cmTC_f8576.tlog\\unsuccessfulbuild"。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dbe91.dir\\Debug\\\\" /Fd"cmTC_dbe91.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f8576.dir\\Debug\\\\" /Fd"cmTC_f8576.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
           Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dbe91.dir\\Debug\\\\" /Fd"cmTC_dbe91.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\CheckFunctionExists.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f8576.dir\\Debug\\\\" /Fd"cmTC_f8576.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\Debug\\cmTC_dbe91.exe" /INCREMENTAL /ILK:"cmTC_dbe91.dir\\Debug\\cmTC_dbe91.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-e5zibo/Debug/cmTC_dbe91.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-e5zibo/Debug/cmTC_dbe91.lib" /MACHINE:X64  /machine:x64 cmTC_dbe91.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 無法開啟檔案 'pthread.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\cmTC_dbe91.vcxproj]
-        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\cmTC_dbe91.vcxproj" (預設目標) 建置完成 -- 失敗。
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\Debug\\cmTC_f8576.exe" /INCREMENTAL /ILK:"cmTC_f8576.dir\\Debug\\cmTC_f8576.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-oimr7h/Debug/cmTC_f8576.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/QZa/Desktop/BZ/3D Engine/3D_rotation/build/CMakeFiles/CMakeScratch/TryCompile-oimr7h/Debug/cmTC_f8576.lib" /MACHINE:X64  /machine:x64 cmTC_f8576.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 無法開啟檔案 'pthread.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\cmTC_f8576.vcxproj]
+        專案 "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\cmTC_f8576.vcxproj" (預設目標) 建置完成 -- 失敗。
         
         建置失敗。
         
-        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\cmTC_dbe91.vcxproj" (預設目標) (1) ->
+        "C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\cmTC_f8576.vcxproj" (預設目標) (1) ->
         (Link 目標) -> 
-          LINK : fatal error LNK1104: 無法開啟檔案 'pthread.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5zibo\\cmTC_dbe91.vcxproj]
+          LINK : fatal error LNK1104: 無法開啟檔案 'pthread.lib' [C:\\Users\\QZa\\Desktop\\BZ\\3D Engine\\3D_rotation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oimr7h\\cmTC_f8576.vcxproj]
         
             0 個警告
             1 個錯誤
         
-        經過時間 00:00:00.41
+        經過時間 00:00:00.46
         
       exitCode: 1
 ...
