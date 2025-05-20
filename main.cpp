@@ -46,10 +46,23 @@ unsigned int aabbIndices[] = {
 };
 
 #pragma region Input Declare
+// Forward declare apply_impulse_to_objects function if it's defined later or in another file
+// For now, we will define a simple version or handle input directly in processInput
+void apply_external_force_to_objects(Object& ball, Object& irregular, bool& shouldApply);
+
 void processInput(GLFWwindow* window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GL_TRUE);
     }
+    // Placeholder for applying force - e.g., press 'J' to apply impulse
+    // static bool j_key_pressed = false;
+    // if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS && !j_key_pressed) {
+    //     j_key_pressed = true;
+    //     // apply_external_force_to_objects(ballObj, irregularObj, true); // This needs ballObj and irregularObj to be accessible
+    // }
+    // if (glfwGetKey(window, GLFW_KEY_J) == GLFW_RELEASE) {
+    //    j_key_pressed = false;
+    // }
 }
 #pragma endregion
 
@@ -93,26 +106,26 @@ bool light2Enabled = true; // 第二個光源開關
 Object irregularObj(
     glm::vec3(irregularMin[0], irregularMin[1], irregularMin[2]),  // localMin
     glm::vec3(irregularMax[0], irregularMax[1], irregularMax[2]),  // localMax
-    glm::vec3(5.0f, 6.0f, 4.5f),                                   // startPos
+    glm::vec3(7.0f, 2.0f, 7.0f),                                   // startPos - Y raised to 2.0f to be above floor
     1.0f,                                                          // 質量
     0.8f,                                                          // 摩擦係數
-    0.2f,                                                          // 彈性係數
-    0.98f                                                          // 阻尼係數
+    0.3f,                                                          // 彈性係數 (was 0.2f, now 0.3f for irr)
+    0.75f                                                          // 阻尼係數 (was 0.85f, now 0.75f for irr - larger drag)
 );
 
 // 修改球的初始化，使用新的球體建構子，加入阻尼參數
 Object ballObj(
-    0.5f,                         // 半徑
-    glm::vec3(5.0f, 3.0f, 4.0f),  // 初始位置
+    0.7f,                         // 半徑
+    glm::vec3(7.0f, 6.0f, 7.0f),  // 初始位置 - Y set to 0.51f (radius + epsilon) to rest on floor
     0.7f,                         // 質量
     0.6f,                         // 摩擦係數
-    0.4f,                         // 彈性係數
-    0.98f                         // 阻尼係數
+    0.4f,                         // 彈性係數 (was 0.4f, now 0.8f for ball - higher bounce)
+    0.98f                         // 阻尼係數 (was 0.98f - less drag for ball)
 );
 
-float gravity = 9.8f;
+// float gravity = 9.8f; // This global var might be unused if physicManager.gravityAcceleration is used
 
-PhysicManager physicManager;
+PhysicManager physicManager(gravityStrength);
 
 #pragma region Helper Function to Create VAO and VBO
 void setupModelBuffers(unsigned int& VAO, unsigned int& VBO, const float* vertices, int vertexCount) {
@@ -257,8 +270,11 @@ int main() {
     // Time initialization
     lastFrame = glfwGetTime();
 
-    // 給球一個初始速度以測試碰撞
-    ballObj.SetVelocity(glm::vec3(2.0f, 0.0f, 0.0f));
+    // 確保初始速度為零，以實現初始靜止
+    ballObj.SetVelocity(glm::vec3(0.0f));
+    ballObj.angularVelocity = glm::vec3(0.0f);
+    irregularObj.SetVelocity(glm::vec3(0.0f));
+    irregularObj.angularVelocity = glm::vec3(0.0f);
 
     while (!glfwWindowShouldClose(window)) {
         float currentFrame = glfwGetTime();
@@ -283,7 +299,7 @@ int main() {
         ImGui::SetWindowSize(ImVec2(300, 400));
 
         ImGui::Text("Adjust Main Camera Position (Top-Left View)");
-        ImGui::SliderFloat3("Camera Position", &camera.Position[0], -10.0f, 10.0f);
+        ImGui::SliderFloat3("Camera Position", &camera.Position[0], -10.0f, 15.0f);
         viewMat = camera.GetViewMatrix();
 
         ImGui::Text("Adjust Camera Pitch and Yaw");
@@ -307,14 +323,14 @@ int main() {
         ImGui::Text("Light Controls");
         ImGui::Checkbox("Light 1 Enabled", &light1Enabled);
         ImGui::Checkbox("Light 2 Enabled", &light2Enabled);
-
+        /*
         ImGui::Separator();
         ImGui::Text("AABB Controls");
         bool showAABB = AABB::GetShowCollisionVolumes();
         if (ImGui::Checkbox("Show AABB Wireframe", &showAABB)) {
             AABB::SetShowCollisionVolumes(showAABB);
         }
-
+        */
         ImGui::Text("Camera Pitch: %.2f degrees", glm::degrees(camera.Pitch));
         ImGui::Text("Camera Yaw: %.2f degrees", glm::degrees(camera.Yaw));
         
@@ -322,6 +338,18 @@ int main() {
         ImGui::Text("Physics Controls");
         ImGui::Checkbox("Pause Physics", &pausePhysics);
         ImGui::SliderFloat("Gravity", &gravityStrength, 0.0f, 20.0f);
+        physicManager.gravityAcceleration = gravityStrength;
+        ImGui::SliderFloat("Angular Drag", &physicManager.angularDragCoefficient, 0.0f, 5.0f, "%.3f");
+        ImGui::SliderFloat("Ball Restitution", &ballObj.restitution, 0.0f, 1.0f, "%.2f");
+
+        if (ImGui::Button("Apply Upward Impulse to All Objects")) {
+            glm::vec3 impulse(4.0f, 10.0f, 0.0f); // Impulse vector (adjust magnitude as needed, e.g., 2.0f for noticeable effect)
+            // Apply to ballObj
+            ballObj.applyImpulse(impulse, ballObj.getWorldCenterOfMass());
+            // Apply to irregularObj
+            irregularObj.applyImpulse(impulse, irregularObj.getWorldCenterOfMass());
+        }
+
         if (ImGui::Button("Reset")) {
             resetBall = true;
             ballObj.reset();
@@ -415,7 +443,6 @@ int main() {
         // 物理模擬交給 PhysicManager
         std::vector<Object*> objects = { &irregularObj, &ballObj };
         physicManager.pausePhysics = pausePhysics; // 同步暫停狀態
-        physicManager.gravityAcceleration = gravityStrength;   // 同步重力
         physicManager.update(objects, roomAABB, deltaTime);
 
         glfwSwapBuffers(window);

@@ -298,3 +298,30 @@ void Object::SetRotation(const glm::quat& rot) {
     updateAABB();
     updateBoundingSphere();
 }
+
+void Object::applyImpulse(const glm::vec3& impulse, const glm::vec3& applyPointWorld) {
+    if (mass <= 0.0f) { // Cannot apply impulse to static or massless objects
+        return;
+    }
+
+    // Apply linear impulse: Δv = J / m
+    velocity += impulse / mass;
+
+    // Apply angular impulse: Δω = I_world_inv * (r × J)
+    // r is the vector from the center of mass to the point of application of the impulse
+    glm::vec3 r = applyPointWorld - getWorldCenterOfMass();
+    glm::vec3 angularImpulseMoment = glm::cross(r, impulse); // This is the torque τ_impulse part
+    
+    glm::mat3 worldInertiaTensor = getWorldInertiaTensor(); // Assumes this gets the non-inverse world inertia tensor
+    glm::mat3 invWorldInertiaTensor;
+
+    if (glm::determinant(worldInertiaTensor) != 0.0f) {
+        invWorldInertiaTensor = glm::inverse(worldInertiaTensor);
+    } else {
+        // For objects with no rotational inertia (or mass 0, though caught above), 
+        // inverse tensor is zero, so no change in angular velocity.
+        invWorldInertiaTensor = glm::mat3(0.0f); 
+    }
+
+    angularVelocity += invWorldInertiaTensor * angularImpulseMoment;
+}

@@ -69,6 +69,7 @@ public:
 
     // Physics related
     void applyForce(const glm::vec3& appliedForce, const glm::vec3& applyPointWorld); // Point is in world space
+    void applyImpulse(const glm::vec3& impulse, const glm::vec3& applyPointWorld); // Point is in world space. Impulse is a direct change in momentum.
     void updatePhysics(float deltaTime);
     glm::vec3 getWorldCenterOfMass() const;
     glm::mat3 getWorldInertiaTensor() const; // Inertia tensor in world space
